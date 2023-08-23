@@ -20,7 +20,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\TeamLID.TravelExperts.Repository\TeamLID.TravelExperts.Repository.csproj" />
+    <ProjectReference Include="..\TeamLID.TravelExperts.Repository\DreamTravelProject.Repository.csproj" />
   </ItemGroup>
 
   <ItemGroup>
