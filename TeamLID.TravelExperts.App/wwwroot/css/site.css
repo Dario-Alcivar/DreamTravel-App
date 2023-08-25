@@ -221,11 +221,11 @@ a {
     background-size: cover;
 }
 
-.jumbotron-packages {
-    background-image: url('https://images.pexels.com/photos/1471686/pexels-photo-1471686.jpeg?cs=srgb&dl=bow-box-card-1471686.jpg&fm=jpg');
+.jumbotron-package {
+    background-image: url('https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_660/https://www.entornoturistico.com/wp-content/uploads/2020/09/agencia-de-viajes-660x330.jpg');
     background-size: cover;
     color: white;
-    min-height: 400px;
+    min-height: 450px;
 }
 
 .jumbotron-login {
