@@ -17,11 +17,9 @@ namespace TeamLID.TravelExperts.Repository.Domain
         public int? CustomerId { get; set; }
         public string TripTypeId { get; set; }
         public int? PackageId { get; set; }
-
         public virtual Customers Customer { get; set; }
-        public virtual Packages Package { get; set; }
+        public virtual Packages Packages { get; set; }
         public virtual TripTypes TripType { get; set; }
         public virtual ICollection<BookingDetails> BookingDetails { get; set; }
-
     }
 }

@@ -206,7 +206,7 @@ namespace TeamLID.TravelExperts.Repository.Domain
                     .HasForeignKey(d => d.CustomerId)
                     .HasConstraintName("Bookings_FK00");
 
-                entity.HasOne(d => d.Package)
+                entity.HasOne(d => d.Packages)
                     .WithMany(p => p.Bookings)
                     .HasForeignKey(d => d.PackageId)
                     .HasConstraintName("Bookings_FK01");

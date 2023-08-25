@@ -18,37 +18,37 @@ namespace TeamLID.TravelExperts.App.Models
     {
         public int BookingId { get; set; }
 
-        [DataType(DataType.Date), DisplayName("Booking Date")]
+        [DataType(DataType.Date), DisplayName("Fecha de reserva")]
         public DateTime? BookingDate { get; set; }
 
-        [DataType(DataType.Date), DisplayName("Trip Start Date")]
+        [DataType(DataType.Date), DisplayName("TFecha Inicio de viaje")]
         public DateTime? PkgStartDate { get; set; }
 
-        [DataType(DataType.Date), DisplayName("Trip End Date")]
+        [DataType(DataType.Date), DisplayName("Fecha Fin de viaje")]
         public DateTime? PkgEndDate { get; set; }
 
-        [DisplayName("Trip Description")]
+        [DisplayName("Descripción de viaje")]
         public string PkgDesc { get; set; }
 
-        [DisplayName("Booking Number")]
+        [DisplayName("Número de reserva")]
         public string BookingNo { get; set; }
 
-        [DisplayName("Number of Travellers")]
+        [DisplayName("Número de viajeros")]
         public double? TravelerCount { get; set; }
 
-        [DisplayName("Customer")]
+        [DisplayName("Cliente")]
         public string CustomerId { get; set; }
 
-        [DisplayName("Trip Type")]
+        [DisplayName("Tipo de viaje")]
         public string TripTypeId { get; set; }
 
-        [DisplayName("Package Booked")]
+        [DisplayName("Paquete reservado")]
         public string PackageId { get; set; }
 
-        [DataType(DataType.Currency), DisplayName("Price (CAD$)")]
+        [DataType(DataType.Currency), DisplayName("Precio (US$)")]
         public decimal Price { get; set; }
 
-        [DisplayName("Total Owing")]
+        [DisplayName("Total")]
         public string Total { get; set; }
     }
 }

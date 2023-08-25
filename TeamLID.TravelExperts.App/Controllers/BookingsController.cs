@@ -27,7 +27,7 @@ namespace TeamLID.TravelExperts.App.Controllers
         // GET: Bookings
         public async Task<IActionResult> Index()
         {
-            var travelExpertsContext = _context.Bookings.Include(b => b.Customer).Include(b => b.Package).Include(b => b.TripType);
+            var travelExpertsContext = _context.Bookings.Include(b => b.Customer).Include(b => b.Packages).Include(b => b.TripType);
             return View(await travelExpertsContext.ToListAsync());
         }
 
@@ -47,7 +47,7 @@ namespace TeamLID.TravelExperts.App.Controllers
                     TravelerCount = bk.TravelerCount,
                     CustomerId = bk.Customer.CustFirstName,
                     TripTypeId = bk.TripType.Ttname,
-                    PackageId = bk.Package.PkgName                            
+                    PackageId = bk.Packages.PkgName                            
                 }).ToList();
                 
             return View(bookings);
@@ -73,7 +73,7 @@ namespace TeamLID.TravelExperts.App.Controllers
 
             var bookings = await _context.Bookings
                 .Include(b => b.Customer)
-                .Include(b => b.Package)
+                .Include(b => b.Packages)
                 .Include(b => b.TripType)
                 .FirstOrDefaultAsync(m => m.BookingId == id);
             if (bookings == null)
@@ -181,7 +181,7 @@ namespace TeamLID.TravelExperts.App.Controllers
 
             var bookings = await _context.Bookings
                 .Include(b => b.Customer)
-                .Include(b => b.Package)
+                .Include(b => b.Packages)
                 .Include(b => b.TripType)
                 .FirstOrDefaultAsync(m => m.BookingId == id);
             if (bookings == null)

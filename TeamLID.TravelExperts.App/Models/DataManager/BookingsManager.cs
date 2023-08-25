@@ -18,7 +18,7 @@ namespace TeamLID.TravelExperts.App.Models.DataManager
             var bookings = context.Bookings
                 .Include(customer => customer.Customer)
                 .Include(trip => trip.TripType)
-                .Include(package => package.Package)
+                .Include(package => package.Packages)
                 .Include(bookingDetail => bookingDetail.BookingDetails)
                 .Where(booking => booking.CustomerId == customerId)
                 .ToList();
@@ -34,7 +34,7 @@ namespace TeamLID.TravelExperts.App.Models.DataManager
             var booking = context.Bookings
                 .Include(customer => customer.Customer)
                 .Include(trip => trip.TripType)
-                .Include(package => package.Package)
+                .Include(package => package.Packages)
                 .Include(bookingDetail => bookingDetail.BookingDetails)
                 .SingleOrDefault(bk => bk.BookingId == id);
 

@@ -26,9 +26,10 @@ namespace TeamLID.TravelExperts.App.Controllers
             _context = context;
         }
 
-        // GET: Packages
+        //GET: Packages
         //async Task<>
         //await _context.Packages.ToListAsync()
+
         public ActionResult Index()
         {
             var packages = PackagesDataManager.GetAll()

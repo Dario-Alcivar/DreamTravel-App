@@ -158,9 +158,9 @@ namespace TeamLID.TravelExperts.App.Controllers
                         TravelerCount = bk.TravelerCount,
                         CustomerId = bk.Customer.CustFirstName,
                         TripTypeId = bk.TripType.Ttname,
-                        PackageId = bk.Package.PkgName,
-                        Price = Math.Round((decimal)(bk.Package.PkgBasePrice + bk.Package.PkgAgencyCommission), 0),
-                        //Total = TotalOwing(bk.Package.PkgBasePrice).ToString("c")
+                        PackageId = bk.Packages.PkgName,
+                        Price = Math.Round((decimal)(bk.Packages.PkgBasePrice + bk.Packages.PkgAgencyCommission), 0),
+                        Total = TotalOwing(bk.Packages.PkgBasePrice).ToString("c")
                     }).ToList();
 
                 return View(bookings);
@@ -181,14 +181,14 @@ namespace TeamLID.TravelExperts.App.Controllers
             {
                 BookingId = booking.BookingId,
                 BookingNo = booking.BookingNo,
-                PkgStartDate = booking.Package.PkgStartDate,
-                PkgEndDate = booking.Package.PkgEndDate,
+                PkgStartDate = booking.Packages.PkgStartDate,
+                PkgEndDate = booking.Packages.PkgEndDate,
                 TravelerCount = booking.TravelerCount,
                 CustomerId = booking.Customer.CustFirstName,
                 TripTypeId = booking.TripType.Ttname,
-                PkgDesc = booking.Package.PkgDesc,
-                PackageId = booking.Package.PkgName,
-                Price = Math.Round((decimal)(booking.Package.PkgBasePrice + booking.Package.PkgAgencyCommission), 0),
+                PkgDesc = booking.Packages.PkgDesc,
+                PackageId = booking.Packages.PkgName,
+                Price = Math.Round((decimal)(booking.Packages.PkgBasePrice + booking.Packages.PkgAgencyCommission), 0),
             };
 
             return View(a);

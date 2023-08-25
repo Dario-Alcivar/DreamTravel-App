@@ -18,7 +18,6 @@ namespace TeamLID.TravelExperts.Repository.Domain
         public string PkgDesc { get; set; }
         public decimal PkgBasePrice { get; set; }
         public decimal? PkgAgencyCommission { get; set; }
-
         public virtual ICollection<Bookings> Bookings { get; set; }
         public virtual ICollection<PackagesProductsSuppliers> PackagesProductsSuppliers { get; set; }
     }
